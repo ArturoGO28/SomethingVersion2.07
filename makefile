@@ -1,20 +1,19 @@
-# Copyright 2021 A.Garcia arturog@bu.edu
+PROG = main
+CC = g++
+CPPFLAGS = -Wall 
+OBJS = V1.o Game.o libs.o
 
-# This Makefile
-# gives instructions to the command
-# make
-# about how and whether to build programs
-#
-# The syntax is
+$(PROG) : $(OBJS)
+	$(CC) -o $(PROG) $(OBJS) -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
-# thingtobuild:  what-it-needs-or-depends-on
-#    instructions on how to build it
-#
+V1.o :
+	$(CC) $(CPPFLAGS) -c V1.cpp -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
-# make uses the modification dates to determine
-# if the programs need to be re-built
+Game.o : Game.h
+	$(CC) $(CPPFLAGS) -c Game.cpp -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
-all: platform
+libs.o : libs.h
+	$(CC) $(CPPFLAGS) -c libs.cpp -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
-platform: platform.cpp
-	g++ platform.cpp -o platform -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+clean :
+	rm -f core $(PROG) $(OBJS)
