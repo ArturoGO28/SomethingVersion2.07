@@ -12,7 +12,7 @@ int main (int argc, char **argv) {
   // rectangle.setOrigin(64, 64);
   // rectangle.setPosition(320, 240);
   sf::Texture texture;
-  if (!texture.loadFromFile("/media/sf_class/project/sprite_sheets/sheet1.png", 
+  if (!texture.loadFromFile("sprite_sheet1.png", 
     sf::IntRect(0, 0, (500/13), (512/13)))) {
     cout << "Failed to load the sprite sheet" << '\n';
   }
