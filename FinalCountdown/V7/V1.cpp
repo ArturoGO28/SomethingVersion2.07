@@ -10,10 +10,10 @@ using std::cin;
 using std::cout;
 
 int main() {
-  sf::RenderWindow titlewindow(sf::VideoMode(800, 600), "Game Interface");
+  sf::RenderWindow titlewindow(sf::VideoMode(1024, 768), "Game Interface");
   
   sf::Texture background;
-  background.loadFromFile("jumpquest.png");
+  background.loadFromFile("jumpquest2.png");
   sf::Sprite windowbackground(background);
 
   sf::RectangleShape playbutton;
