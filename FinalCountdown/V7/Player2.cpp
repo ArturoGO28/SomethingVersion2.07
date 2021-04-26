@@ -10,7 +10,7 @@ void Player2::initVariables() {
 
 // Reads in sourceSheet and checks if it worked
 void Player2::initTexture() {
-  if (!this->sourceSheet.loadFromFile("person64.png"))
+  if (!this->sourceSheet.loadFromFile("frog64.png"))
     std::cout << "ERROR IN Player2.CPP: Could not load Player2 sheet!" << "\n";
 }
 
