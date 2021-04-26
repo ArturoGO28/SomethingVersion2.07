@@ -13,7 +13,7 @@ int main() {
   sf::RenderWindow titlewindow(sf::VideoMode(800, 600), "Game Interface");
   
   sf::Texture background;
-  background.loadFromFile("imgonline-com-ua-resize-fDYHej58ZaxjLu8.jpg");
+  background.loadFromFile("jumpquest.png");
   sf::Sprite windowbackground(background);
 
   sf::RectangleShape playbutton;
